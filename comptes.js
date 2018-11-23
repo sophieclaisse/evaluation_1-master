@@ -37,9 +37,13 @@ depense.push(new comptes("Impots Locaux", impotsL));
 console.log(depense);
 
 document.getElementById("ok").addEventListener("click", function () {
-    var titre= depense.intitule;
-    console.log(titre);
-   document.getElementById("affDepenses").innerHTML= titre;
+
+    for (var i=0; i<depense.length; i++) {
+
+        document.getElementById("affDepenses").innerHTML += depense[i].intitule + "<br>";
+        document.getElementById("valeurs").innerHTML+= depense[i].valeur;
+
+}
 
 });
 
