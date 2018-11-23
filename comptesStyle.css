@@ -1,0 +1,16 @@
+
+#depenses {
+    display: flex;
+    flex-direction: column;
+}
+
+#loyer, #credit, #charges, #tel, #assH, #assV, #mutuelle, #garde, #impotsR, #impotsL{
+    width: 100px;
+    height: 25px;
+}
+
+#ok{
+    width: 100px;
+    height: 35px;
+}
+
