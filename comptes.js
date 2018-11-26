@@ -11,7 +11,7 @@ var mutuelle= document.getElementById("mutuelle").value;
 var garde= document.getElementById("garde").value;
 var impotsR= document.getElementById("impotsR").value;
 var impotsL= document.getElementById("impotsL").value;
-
+var Total= loyer+ credit+ charges+ tel+ assH+ assV+ mutuelle +garde + impotsR + impotsL;
 
 
 
@@ -34,6 +34,7 @@ depense.push(new comptes("Mutuelle Santé", mutuelle));
 depense.push(new comptes("Frais de garde", garde));
 depense.push(new comptes("Impots sur le revenu", impotsR));
 depense.push(new comptes("Impots Locaux", impotsL));
+depense.push(new comptes("TOTAL", Total));
 console.log(depense);
 
 document.getElementById("ok").addEventListener("click", function () {
@@ -41,10 +42,16 @@ document.getElementById("ok").addEventListener("click", function () {
     for (var i=0; i<depense.length; i++) {
 
         document.getElementById("affDepenses").innerHTML += depense[i].intitule + "<br>";
-        document.getElementById("valeurs").innerHTML+= depense[i].valeur;
+        document.getElementById("valeurs").innerHTML+= depense[i].valeur+ "<br>";
 
 }
 
+    document.getElementById("ok").disabled= true;
+
 });
 
-
+//RESET
+document.getElementById("reset").addEventListener("click", function (){
+    document.getElementById("valeurs").innerHTML= "";
+    document.getElementById("ok").disabled= false;
+});

@@ -4,28 +4,40 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="comptesStyle.css">
+    <link rel="stylesheet" href="bootstrap.css">
 
 </head>
 <body>
 <h1>DEPENSES</h1>
 
+<div class="container">
 
-<div id="depenses">
-    <input id="loyer" required>
-    <input id="credit" required>
-    <input id="charges" required>
-    <input id="tel" required>
-    <input id="assH" required>
-    <input id="assV" required>
-    <input id="mutuelle" required>
-    <input id="garde" required>
-    <input id="impotsR" required>
-    <input id="impotsL" required>
-    <button id="ok">VALIDER</button>
+    <div class="row">
 
-<div id="affDepenses"></div>
-<div id="valeurs"></div>
+
+        <div class="col-sm-2" id="depenses">
+            <input id="loyer" placeholder="Loyer" required>
+            <input id="credit" placeholder="Credits" required>
+            <input id="charges" placeholder="Charges (eau, gaz etc)" required>
+            <input id="tel" placeholder="Téléphone" required>
+            <input id="assH"  placeholder="Assurance Habitation"  required>
+            <input id="assV"  placeholder="Assurance Véhicule" required>
+            <input id="mutuelle"  placeholder="Mutuelle" required>
+            <input id="garde"  placeholder="Frais de Garde" required>
+            <input id="impotsR"  placeholder="Impots sur le revenu" required>
+            <input id="impotsL"  placeholder="Impots Locaux" required>
+
+            <button id="ok">VALIDER</button>
+        </div>
+
+            <div class="col-sm-6" id="affDepenses"></div>
+
+            <div class="col-sm-2" id="valeurs"></div>
+
+    </div>
 </div>
+
+<BUTTON id="reset">RESET</BUTTON>
 
 <div id="ajout">
     <input id="NouveauTit"><button id="Ok10">OK</button>
